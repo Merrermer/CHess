@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Chess (Xiangqi)</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Chinese Chess (Xiangqi)</h1>
+        <div class="game-info">
+            <div id="status">Red's Turn</div>
+            <button id="reset-button">New Game</button>
+            <button id="ai-move-button">AI Move</button>
+            <select id="ai-level">
+                <option value="random">Random</option>
+                <option value="model">JS RL Model</option>
+                <option value="python">Python RL Model</option>
+            </select>
+            <div>
+                <label for="training-mode">
+                    <input type="checkbox" id="training-mode"> Training Mode
+                </label>
+            </div>
+        </div>
+        <div id="board" class="board"></div>
+        <div class="move-history">
+            <h3>Move History</h3>
+            <div id="moves-list"></div>
+        </div>
+        <div class="model-info">
+            <h3>Model Information</h3>
+            <div id="model-info">Not connected to Python model</div>
+        </div>
+    </div>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html> 
