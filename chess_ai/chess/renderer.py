@@ -53,8 +53,8 @@ class ChessBoardRenderer(QWidget):
         painter.setPen(pen)
         
         # 绘制外框
-        board_width = self.cell_size * self.board.cols
-        board_height = self.cell_size * self.board.rows
+        board_width = self.cell_size * (self.board.cols-1)
+        board_height = self.cell_size * (self.board.rows-1)
         board_rect = QRect(
             self.margin, 
             self.margin, 
@@ -64,7 +64,7 @@ class ChessBoardRenderer(QWidget):
         painter.drawRect(board_rect)
         
         # 绘制横线
-        for row in range(self.board.rows + 1):
+        for row in range(self.board.rows):
             y = self.margin + row * self.cell_size
             painter.drawLine(
                 self.margin, y,
@@ -72,7 +72,7 @@ class ChessBoardRenderer(QWidget):
             )
         
         # 绘制竖线
-        for col in range(self.board.cols + 1):
+        for col in range(self.board.cols):
             x = self.margin + col * self.cell_size
             painter.drawLine(
                 x, self.margin,
