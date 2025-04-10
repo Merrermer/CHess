@@ -83,12 +83,12 @@ class ChessBoardRenderer(QWidget):
         font = QFont("SimHei", 20, QFont.Bold)
         painter.setFont(font)
         painter.drawText(
-            self.margin + 1.5 * self.cell_size, 
+            self.margin + int(1.5 * self.cell_size), 
             self.margin + 5 * self.cell_size - 10,
             "楚 河"
         )
         painter.drawText(
-            self.margin + 5.5 * self.cell_size, 
+            self.margin + int(5.5 * self.cell_size), 
             self.margin + 5 * self.cell_size - 10,
             "汉 界"
         )
